@@ -1,0 +1,112 @@
+.contact{
+    width: 100%;
+    padding: 20px 30px;
+    background: #000;
+}
+.contact .container{
+    display: flex;
+    max-width: 100%;
+    margin-top: 10px;
+}
+.contact .container .leftBox{
+    width: 30%;
+    padding: 20px 20px;
+}
+.contact .container .leftBox h3{
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #fff;
+}
+.contact .container .leftBox .info{
+    margin-top: 20px;
+}
+.contact .container .leftBox .info .box{
+    display: flex;
+    width: 100%;
+    padding: 10px 20px;
+}
+.contact .container .leftBox .info .box .icon{
+    padding: 20px 20px;
+    font-size: 22px;
+    border-radius: 10px;
+    background: linear-gradient(to right, #363636 , #141414);
+    color: #fff;
+}
+.contact .container .leftBox .info .box .detail{
+    margin-left: 20px;
+}
+.contact .container .leftBox .info .box .detail h4{
+    font-size: 14px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #9d9d9d;
+}
+.contact .container .leftBox .info .box .detail p{
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #d7d7d7;
+}
+.contact .container .rightBox{
+    width: 600px;
+    margin-left: 30px;
+    padding: 30px 30px;
+    border-radius: 10px;
+    background: linear-gradient(to right, #363636 , #141414);
+}
+/*.contact .container .rightBox img{*/
+/*    width: 100px;*/
+/*    height: 100px;*/
+/*    float: right;*/
+/*    border-radius: 50%;*/
+/*}*/
+.contact .container .rightBox h2{
+    font-size: 42px;
+    text-transform: capitalize;
+    color: #fff;
+}
+.contact .container .rightBox h2 span{
+    color: #5a77f3;
+}
+.contact .container .rightBox .form{
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+}
+.contact .container .rightBox .form input{
+    margin-top: 10px;
+    padding: 20px 20px;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    color: #fff;
+    background: #000;
+}
+.contact .container .rightBox .form textarea{
+    height: 200px;
+    resize: none;
+    margin-top: 10px;
+    padding: 20px 20px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    color: #fff;
+    background: #000;
+}
+.contact .container .rightBox .form button{
+    margin-top: 10px;
+    padding: 20px 20px;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    color: #fff;
+    background: #000;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.contact .container .rightBox .form button:hover{
+    color: #000;
+    background: #fff;
+}

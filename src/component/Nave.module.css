@@ -1,0 +1,53 @@
+.navContainer{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 20px 30px;
+    justify-content: space-between;
+    background: #000;
+}
+.navContainer .logo h2{
+    font-size: 28px;
+    color: #fff;
+    cursor: pointer;
+}
+.navContainer .links ul {
+    display: flex;
+    list-style: none;
+}
+.navContainer .links ul li{
+    margin-top: 10px;
+}
+.navContainer .links ul li .link{
+    margin-left: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.5s;
+    color: #323232;
+}
+.navContainer .links ul li .link:hover{
+    color: #fff;
+}
+.navContainer .btn{
+    margin-right: 20px;
+    padding: 10px 30px;
+    border-radius: 10px;
+    background-color: #323232;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.navContainer .btn:hover{
+    background-color: #fff;
+}
+.navContainer .btn .btnLink{
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: 0.5s;
+    color: #fff;
+}
+.navContainer .btn:hover .btnLink{
+    color: #323232;
+}
