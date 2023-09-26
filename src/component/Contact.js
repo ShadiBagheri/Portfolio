@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 //Image
 import icon from "../image/icon.png";
 //Icon
@@ -9,6 +9,36 @@ import { BiSolidMap } from "react-icons/bi";
 import styles from "../component/Contact.module.css";
 
 const Contact = () => {
+
+    const [data, setData] = useState({
+        Name: "",
+        Email: "",
+        Subject: "",
+        Message: ""
+    });
+
+    let Name, Value;
+    const inputHandler = (event) => {
+        Name = event.target.name;
+        Value = event.target.value;
+        setData({...data, [Name]:Value});
+    }
+    const sendData = async (event) => {
+        const { Name, Email, Subject, Message } = data;
+        event.preventDefault()
+        const options = {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                Name, Email, Subject, Message
+            })
+        }
+        const send = await fetch("https://portfolio-ec373-default-rtdb.firebaseio.com/Massage.json", options);
+        console.log(send);
+    }
+
     return (
         <>
             <div className={styles.contact}>
@@ -48,13 +78,13 @@ const Contact = () => {
                     <div className={styles.rightBox}>
                         {/*<img src={icon} alt="icon"/>*/}
                         <h2>let's talk <span>together</span></h2>
-                        <div className={styles.form}>
-                            <input type="text"  placeholder="Name"/>
-                            <input type="text"  placeholder="E-mail"/>
-                            <input type="text"  placeholder="Subject"/>
-                            <textarea placeholder="Message"/>
-                            <button type="submit">Send</button>
-                        </div>
+                            <form method="POST" className={styles.form}>
+                                <input type="text" name="Name" value={data.Name} placeholder="Name" onChange={inputHandler}/>
+                                <input type="text" name="Email" value={data.Email} placeholder="Email" onChange={inputHandler}/>
+                                <input type="text" name="Subject" value={data.Subject} placeholder="Subject" onChange={inputHandler}/>
+                                <textarea name="Message" value={data.Message} placeholder="Message" onChange={inputHandler}/>
+                                <button type="submit" onClick={sendData}>Send</button>
+                            </form>
                     </div>
                 </div>
             </div>
